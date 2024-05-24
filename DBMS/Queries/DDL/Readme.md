@@ -43,3 +43,13 @@ CREATE TABLE employee2(
            PRIMARY KEY (EMPLOYEE_ID)
 )
 ```
+
+```
+CREATE TABLE department1(
+        department_id NUMBER(4),
+        department_name VARCHAR2(30) NOT NULL,
+        manager_id NUMBER(6),
+        location_id NUMBER(4),
+        CONSTRAINT department1_dept_id_pk
+           PRIMARY KEY (DEPARTMENT_ID)
+```

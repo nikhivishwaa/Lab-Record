@@ -10,7 +10,14 @@ VALUES (70,'Public_Relation',100,1700)
 INSERT INTO departments
 VALUES (132,'Public_Relation',100,1700)
 ```
-###### CREATING NEW TABLE
+###### Copying Data From one Table to Another Table
 ```
-hi
+INSERT INTO department1
+SELECT * FROM departments
+```
+
+###### Deleting Row From Table
+```
+DELETE FROM departments
+    WHERE department_id = 270;
 ```

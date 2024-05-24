@@ -74,3 +74,8 @@ CREATE TABLE department1(
            PRIMARY KEY (DEPARTMENT_ID)
 )
 ```
+###### copying departments data into department1
+```
+INSERT INTO department1
+SELECT * FROM departments
+```

@@ -79,3 +79,37 @@ CREATE TABLE department1(
 INSERT INTO department1
 SELECT * FROM departments
 ```
+
+###### Creating Table with Foreign key
+```
+CREATE TABLE employee4(
+        employee_id NUMBER(6),
+        first_name VARCHAR2(20),
+        last_name VARCHAR2(25) NOT NULL,
+        email VARCHAR2(25) NOT NULL,
+        phone_number VARCHAR2(20) NOT NULL,
+        hire_date DATE DEFAULT SYSDATE,
+        job_id VARCHAR2(10) NOT NULL,
+        salary NUMBER(8),
+        commission_pct NUMBER(2),
+        manager_id NUMBER(6),
+        department_id NUMBER(4),
+        CONSTRAINT employee4_emp_id_phno_pk
+           PRIMARY KEY (EMPLOYEE_ID, PHONE_NUMBER),
+        CONSTRAINT45 employee4_dept_id_fk
+           FORIEGN KEY (DEPARTMENT_ID)
+              REFERENCES department1(department_id),
+        CONSTRAINT employee4_email_uk
+           UNIQUE(EMAIL)
+)
+```
+
+
+###### Create Table from SubQuery
+```
+CREATE TABLE dept80
+  AS
+     SELECT employee_id, last_name, salary*12 Annual_Salary, hire_date
+     FROM employees
+     WHERE department_id = 80
+```

@@ -121,3 +121,9 @@ CREATE TABLE dept80
 ALTER TABLE dept80
 ADD (job_id VARCHAR2(9))
 ```
+
+###### alter table to modify a column
+```
+ALTER TABLE dept80
+MODIFY (last_name VARCHAR2(30))
+```

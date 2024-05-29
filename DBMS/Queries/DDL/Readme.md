@@ -145,3 +145,8 @@ SET UNUSED (employee_id)
 ALTER TABLE dept80
 DROP UNUSED COLUMNS
 ```
+
+###### Dropping the Table (TABAHI)
+```
+DROP TABLE dept80
+```

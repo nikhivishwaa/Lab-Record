@@ -127,3 +127,9 @@ ADD (job_id VARCHAR2(9))
 ALTER TABLE dept80
 MODIFY (last_name VARCHAR2(30))
 ```
+
+###### alter table to dropping a column
+```
+ALTER TABLE dept80
+DROP (job_id)
+```

@@ -173,3 +173,19 @@ ADD CONSTRAINT emp_mgr_frk
     FOREIGN KEY(manager_id)
     REFERENCES employee2(employee_id)
 ```
+
+###### Adding Foreign Key with on delete child rows also deleted
+```
+ALTER TABLE employee2
+ADD CONSTRAINT emp_dept_frk
+    FOREIGN KEY(department_id)
+    REFERENCES departments ON DELETE CASCADE
+```
+
+###### Modifying Foreign Key
+```
+ALTER TABLE employee2
+ADD CONSTRAINT emp_mgr_frk
+    FOREIGN KEY(manager_id)
+    REFERENCES employee2 ON DELETE CASCADE
+```

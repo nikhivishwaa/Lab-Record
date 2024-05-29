@@ -133,3 +133,15 @@ MODIFY (last_name VARCHAR2(30))
 ALTER TABLE dept80
 DROP (job_id)
 ```
+
+###### alter table to hide a column by marking unused
+```
+ALTER TABLE dept80
+SET UNUSED (employee_id)
+```
+
+###### alter table dropping unused columns
+```
+ALTER TABLE dept80
+DROP UNUSED COLUMNS
+```

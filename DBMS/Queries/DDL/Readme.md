@@ -113,3 +113,11 @@ CREATE TABLE dept80
      FROM employees
      WHERE department_id = 80
 ```
+
+##### ALTER TABLE
+
+###### alter table to add new column
+```
+ALTER TABLE dept80
+ADD (job_id VARCHAR2(9))
+```

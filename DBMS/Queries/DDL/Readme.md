@@ -153,15 +153,23 @@ DROP TABLE dept80
 
 ##### Enabling constraint in table - 
 
-###### reating Primary Key
+###### Adding Primary Key
 ```
 ALTER TABLE dept80
 MODIFY employee_id PRIMARY KEY
-
 ```
+
 ###### OR
 ```
 ALTER TABLE dept81
 ADD CONSTRAINT emp_mgr_Pk
     PRIMARY KEY (employee_id)
+```
+
+###### Adding Foreign Key
+```
+ALTER TABLE employee2
+ADD CONSTRAINT emp_mgr_frk
+    FOREIGN KEY(manager_id)
+    REFERENCES employee2(employee_id)
 ```

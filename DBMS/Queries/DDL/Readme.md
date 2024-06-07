@@ -189,3 +189,9 @@ ADD CONSTRAINT emp_mgr_frk
     FOREIGN KEY(manager_id)
     REFERENCES employee2 ON DELETE CASCADE
 ```
+
+###### Disable Constraint
+```
+ALTER TABLE employee2
+DISABLE CONSTRAINT emp_mgr_frk
+```

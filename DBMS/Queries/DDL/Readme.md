@@ -189,3 +189,34 @@ ADD CONSTRAINT emp_mgr_frk
     FOREIGN KEY(manager_id)
     REFERENCES employee2 ON DELETE CASCADE
 ```
+
+###### Disable Constraint
+```
+ALTER TABLE employee2
+DISABLE CONSTRAINT emp_mgr_frk
+```
+
+###### Get Constraint Name
+```
+SELECT *
+FROM SYS.USER_CONSTRAINTS
+```
+
+###### Get ConstraintS Of EMPLOYEE3 Table
+```
+SELECT *
+FROM SYS.USER_CONSTRAINTS
+WHERE table_name = 'EMPLOYEE3'
+```
+
+###### Disable Primary key Constraint Of EMPLOYEE3 
+```
+ALTER TABLE employee3
+DISABLE CONSTRAINT EMPLOYEE3_EMP_ID_PHNO_PK
+```
+
+###### Enable Primary key Constraint Of EMPLOYEE3 
+```
+ALTER TABLE employee3
+ENABLE CONSTRAINT EMPLOYEE3_EMP_ID_PHNO_PK
+```

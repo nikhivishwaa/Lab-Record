@@ -220,3 +220,25 @@ DISABLE CONSTRAINT EMPLOYEE3_EMP_ID_PHNO_PK
 ALTER TABLE employee3
 ENABLE CONSTRAINT EMPLOYEE3_EMP_ID_PHNO_PK
 ```
+
+###### Alter multiple column in a table by modeifying multiple
+```
+ALTER TABLE emp
+MODIFY (empno NUMBER(8) PRIMARY KEY)
+MODIFY (ename VARCHAR2(40) NOT NULL)
+```
+
+###### Alter multiple column in a table by adding multiple
+```
+ALTER TABLE emp
+ADD (phone NUMBER(10) UNIQUE,
+     email VARCHAR2(30) UNIQUE)
+```
+
+###### Rename Table
+
+```
+ALTER TABLE emp 
+RENAME TO employee
+```
+

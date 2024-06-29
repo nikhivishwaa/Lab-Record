@@ -96,8 +96,8 @@ CREATE TABLE employee4(
         department_id NUMBER(4),
         CONSTRAINT employee4_emp_id_phno_pk
            PRIMARY KEY (EMPLOYEE_ID, PHONE_NUMBER),
-        CONSTRAINT45 employee4_dept_id_fk
-           FORIEGN KEY (DEPARTMENT_ID)
+        CONSTRAINT employee4_dept_id_fk
+           FOREIGN KEY(DEPARTMENT_ID)
               REFERENCES department1(department_id),
         CONSTRAINT employee4_email_uk
            UNIQUE(EMAIL)

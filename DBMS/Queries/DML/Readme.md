@@ -16,6 +16,13 @@ INSERT INTO department1
 SELECT * FROM departments
 ```
 
+###### Updating Row in Table
+```
+UPDATE employees
+SET department_id = 55
+WHERE department_id = 110
+```
+
 ###### Deleting Row From Table
 ```
 DELETE FROM departments
